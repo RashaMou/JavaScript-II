@@ -72,6 +72,7 @@ function contains(item, list, cb) {
   // }
   return cb(list.includes(item));
 }
+
 contains('Pencil', items, function(banana){
   console.log(banana);
   return banana;
