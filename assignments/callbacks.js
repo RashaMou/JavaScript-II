@@ -78,13 +78,22 @@ contains('Pencil', items, function(banana){
   return banana;
 });
 
-
-
 /* STRETCH PROBLEM */
 
+let newArray = [];
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
-
+  // let duplicateFree = array.filter((element, index) => element.indexOf(element) === index);
+  for(let i=0; i<array.length; i++) {
+    if(newArray.indexOf(array[i]) === -1) {
+      newArray.push(array[i]);
+    }
+  }
+  cb(newArray);
 }
+
+
+
+
